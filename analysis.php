@@ -10,7 +10,7 @@
         try {
 	    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 	    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
-            $sql = 'CALL get_scenario_close_open';
+            $sql = 'CALL calculate_scenario_close_open';
             $q = $pdo->query($sql); // call sp
             $q->setFetchMode(PDO::FETCH_ASSOC);
         } catch (PDOException $e) {

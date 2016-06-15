@@ -25,7 +25,7 @@
             </tr>
             <?php while ($r = $q->fetch()): ?>
                 <tr>
-                    <td><?php echo number_format($r['bay']*100, 1) . '%' ?></td>
+                    <td><?php echo number_format($r['bay_rating']*100, 1) . '%' ?></td>
                     <td><?php echo $r['symbol'] ?></td>
                     <td><a href="historical.php?stock_id=<?php echo $r['stock_id'] ?>"><?php echo $r['company_name'] ?></a></td>
                 </tr>
